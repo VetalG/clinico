@@ -1,5 +1,160 @@
-/* main section*/
-$mainColor:red;
-section.main{
-     color:$mainColor;
+$rem:16px;
+$fon:#24A7ED;
+$bfon:#0B83D7;
+$white:#fff;
+html{
+	font-size:$rem;
+	a:hover{
+		font-weight:bold;
+	}
+}
+header{
+	.wrap{
+		padding:5px;
+	}
+	.logo{
+		float:left;
+		width:220px;
+		img{
+			margin-left:0;
+		}
+	}
+	.contacts{
+		float:right;
+		width:260px;
+		li{
+			display:inline-block;
+			padding:10px;
+			vertical-align:middle;
+			font-size:1.5rem;
+			a {
+				color:$fon;
+			}
+			a:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+	.header{
+		height: 400px;
+		background-image: url('../img/img-01.jpg');
+		background-position: right;
+		background-size: cover;
+		margin-bottom:-5px;
+		.m_slider {
+			float: left;
+			width: 50%;
+			padding-left: 4%;
+			padding-top: 60px;
+			&.owl-carousel{
+				z-index: 20;
+			}
+			.owl-dots{
+				margin-bottom:-4%;
+				.owl-dot{
+					background-color: #fff;
+					width: 9px;
+					height: 9px;
+					display: inline-block;
+					margin-right: 12px;
+					vertical-align:middle;
+					&.active{
+						background-color: #6BCDFC;
+						width: 12px;
+						height: 12px;
+					}
+				}
+			}
+			h2 {
+				font-weight: 300;
+				.blue {
+					color: $fon;
+				}
+			}
+			p {
+				padding: 30px 0;
+				.blue {
+					color: $fon;
+				}
+			}
+			button {
+				margin-top: 5px;
+				margin-bottom: 40px;
+				background-color: $white;
+				padding:25px;
+				cursor: pointer;
+				&:hover{
+					background-color:$fon;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.wrap{
+	max-width:1024px;
+	margin: 0 auto;
+}
+.bline{
+	height: 10px;
+	background-color: $fon;
+}
+.line{
+ 	background-color: $bfon;
+ 	h1{
+ 		color:$white;
+ 		padding: 2px 5px 5px;
+
+ 	}
+}
+main{
+	.service{
+		width: 33%;
+		float: left;
+		padding: 5px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		.filter{
+			position: absolute;
+			width: 150%;
+			top:-5px;
+			left:-5px;
+			background-color: $fon;
+			opacity: 0.3;
+		}
+		a:hover{
+			h2,p{
+				background-color: $fon;
+				color:$white;
+			}
+			.filter{
+				height: 150%;
+			}
+		}
+		h2,p{
+			padding: 5px 0;
+			width: 100%;
+  			white-space: nowrap;
+  			overflow: hidden;
+  			text-overflow: ellipsis;
+		}
+		.line{
+			@extend.line;
+			height: 10px;;
+		}
+	}
+}
+footer{
+	h3{
+		float:left;
+		width: 25%;
+		padding:10px 5px 20px 0px;
+		a{
+			color:$white;
+		}
+		a:hover{
+			text-decoration:underline;
+		}
+	}
 }
