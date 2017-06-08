@@ -1,0 +1,51 @@
+/* Some Base CSS Rules */
+
+//Import sprite
+//@import "../sprites/sprite.scss";
+//@include sprite($НАЗВА ІКОНКИ);
+
+/*GENERAL STYLES*/
+body {
+    font-family: OpenSans-Regular, Arial, Helvetica, sans-serif;
+}
+
+img, iframe {
+	margin: auto;
+	display: block;
+	max-width: 100%;
+}
+
+@media \0screen {
+    img {
+        width: auto;
+        /* for ie 8 */
+    }
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; *behavior: url(/js/boxsizing.htc);
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.hidden{
+	display: none;
+}
+.withNo{
+	opacity: 0;
+}
+.wrapper{
+  max-width: 1250px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
