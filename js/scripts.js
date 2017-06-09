@@ -1,16 +1,44 @@
 window.onload=function(){
 	
-	$(".single_service").click(function(){
-		$("#slider_top, #services, #sercices_holder").fadeOut(500);
+	$(".single_service, .Bread_crumbs .root").click(function(){
+		$("#slider_top, #services, #sercices_holder, .chose_hospital, .m_specialist_wrap, .Bread_crumbs .root + span, .Bread_crumbs .root + span + span,  .Bread_crumbs .root + span + span +span, .Bread_crumbs .root + span + span + span + span").fadeOut(500);
 		$(".sinlge_servise_viwer").delay(500);
-		$(".sinlge_servise_viwer").fadeIn(500);
+		$(".sinlge_servise_viwer, .Bread_crumbs, .Bread_crumbs .root").fadeIn(500);
 		return false;
 	});
-	$(".sinlge_servise_viwer aside ul li").click(function(){
-		$(".sinlge_servise_viwer").fadeOut(500)
-		$(".m_specialist_wrap").delay(500);
-		$(".m_specialist_wrap").fadeIn(500);
+
+  $(".sinlge_servise_viwer aside ul li, .Bread_crumbs .root1").click(function(){
+		$("#slider_top, .sinlge_servise_viwer, .m_specialist_wrap, .Bread_crumbs .root1 + span, .Bread_crumbs .root2, #services, #sercices_holder, .Bread_crumbs .root + span, .Bread_crumbs .root + span + span").fadeOut(500);
+		$(".chose_hospital").delay(500);
+		$(".chose_hospital, .Bread_crumbs .root + span, .Bread_crumbs .root + span + span").fadeIn(500);
+        setTimeout(OneLineImg, 500, '.hospital img');
+        return false;
 	});
+
+  $(".single_hospital").click(function(){
+        $("#slider_top, .sinlge_servise_viwer, #services, #sercices_holder, .chose_hospital, .Bread_crumbs .root + span, .Bread_crumbs .root + span + span").fadeOut(500);
+        $(".m_specialist_wrap").delay(500);
+        $(".m_specialist_wrap, .Bread_crumbs .root + span, .Bread_crumbs .root + span + span, .Bread_crumbs .root + span + span +span, .Bread_crumbs .root + span + span + span + span").fadeIn(500);
+       return false;
+  });
+
+  function OneLineImg(stringSelectorImgColection){
+    var colection=$(stringSelectorImgColection), MaxH=0;
+    colection.css('height', 'auto');
+    for (var i = 0; i < colection.length; i++) {
+      if (MaxH<colection[i].clientHeight) {
+          MaxH=colection[i].clientHeight;
+      }   
+    }
+    colection.css('height', MaxH);
+  }
+
+  $('#cont').click(function(){
+    $("#slider_top, .sinlge_servise_viwer, #services, #sercices_holder, .chose_hospital, .m_specialist_wrap, .Bread_crumbs").fadeOut(500);
+    $('.contacts_page').delay(500);
+    $('.contacts_page').fadeIn(500);
+    return false;
+  });
 
 	$("#m_header-carousel").owlCarousel({
   	items: 1,
@@ -34,18 +62,12 @@ window.onload=function(){
   	navSpeed:speed,
   	autoplayHoverPause:true,
   	responsive: {
-  		993:{
+  		769:{
   			items: 3
   		},
-  		769: {
-  			items: 2
-  		},
-  		481: {
-  			items: 3
-  		},
-  		321: {
-  			items: 2
-  		}
+      1:{
+        items: 2
+      }
   	},
   	loop:true
   });

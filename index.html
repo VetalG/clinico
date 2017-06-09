@@ -8,16 +8,17 @@
 	<title>Clinico</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="no_footer">
+	<div class="main_wrap">
 	<header>
 		<div class="wrap">
 			<div class="logo">
-				<img src="img/logo.png" alt="logo">
+				<a href="index.html"><img src="img/logo.png" alt="logo"></a>
 			</div>
 			<ul class="contacts">
-				<li><a href="contact.html">Контакти</li>
+				<li><a id="cont" href="#">Контакти</li>
 				<li><a href="tel:+123"><img src="img/icons8-Офисный телефон-40.png"></a></li>
 				<li><a href="mailto:example@gmail.com"><img src="img/icons8-Сообщение в квадрате-40.png"></a></li>
 			</ul>
@@ -29,6 +30,12 @@
 				<h1>
 					БУДЬТЕ ЗДОРОВІ РАЗОМ З НАМИ
 				</h1>
+				<div class="Bread_crumbs">
+					<span class="root">Services</span> <span> &gt; </span>	
+					<span class="root1">Filials</span> <span> &gt; </span>
+					<span class="root2">Specialists</span>
+				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		<div id="slider_top" class="header wrap">
@@ -72,6 +79,8 @@
 			</div>
 		</div>
 	</header>
+	<main>
+	<div class="wrap clearfix">
 	<div id="sercices_holder">
 		<div class="bline wrap"></div>
 		<div class="line wrap">
@@ -80,11 +89,9 @@
 				</h1>
 		</div>
 	</div>
-	<main class="wrap clearfix">
 		<div id="services">
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/_s88_t7849_i4670.jpg" alt="single service">
 					<h2>ЕСТЕТИЧНА МЕДИЦИНА</h2>
 					<p>Короткий опис</p>
@@ -93,7 +100,6 @@
 			</div>
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/_s88_t7849_i4671.jpg" alt="single service">
 					<h2>ГІНЕКОЛОГІЯ</h2>
 					<p>Короткий опис</p>
@@ -102,7 +108,6 @@
 			</div>
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/_s88_t7849_i4672.jpg" alt="single service">
 					<h2>ПРОКТОЛОГІЯ</h2>
 					<p>Короткий опис</p>
@@ -111,7 +116,6 @@
 			</div>
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/033c4312b2aa114f5e950290a6f6e792_1423567634_s88_t7849_i4673.jpeg" alt="single service">
 					<h2>УРОЛОГІЯ</h2>
 					<p>Короткий опис</p>
@@ -120,7 +124,6 @@
 			</div>
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/slide4_s88_t7849_i5087.jpg" alt="single service">
 					<h2>СІМЕЙНА МЕДИЦИНА</h2>
 					<p>Короткий опис</p>
@@ -129,7 +132,6 @@
 			</div>
 			<div class="service">
 				<a class="single_service" href="single_service.html">
-					<div class="filter"></div>
 					<img src="img/uzi-3_s88_t7849_i5088.jpg" alt="single service">
 					<h2>УЛЬТРАЗВУКОВА ДІАГНОСТИКА</h2>
 					<p>Короткий опис</p>
@@ -138,10 +140,6 @@
 			</div>
 		</div>
 		<div class="sinlge_servise_viwer clearfix">
-			<div class="Bread_crumbs">
-				<a href="index.html"><span>Home</span></a> &gt; 
-				<span>Services</span>
-			</div>
 			<aside>
 				<ul><h2>ОБЕРІТЬ ПОСЛУГУ</h2>
 					<li>ПОСЛУГА НОМЕР 1</li>
@@ -162,12 +160,114 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur laboriosam reiciendis odio maxime amet ducimus error, laborum ratione quos sed veniam temporibus dolorum illum! Sequi impedit reiciendis vel aut natus.</p>
 			</section>			
 		</div>
-		<div class="m_specialist_wrap">
-		<div class="Bread_crumbs">
-			<a href="index.html"><span>Home</span></a> &gt; 
-			<span>Services</span>  &gt;
-			<span>Specialists</span>
+		<div class="chose_hospital clearfix">
+			<h1 class="typical_h1">ОБЕРІТЬ ФІЛІЮ</h1>
+			<div class="hospital">
+				<a class="single_hospital" href="single_service.html">
+					<img src="img/hospital1.jpg" alt="hospital1">
+					<h2>Філія №1</h2>
+					<p>м. Місто</p>
+					<p>вул. Вулиця буд. 37</p>
+				</a>
+				<div class="line"></div>
+			</div>
+			<div class="hospital">
+				<a class="single_hospital" href="single_service.html">
+					<img src="img/hospital2.jpg" alt="hospital2">
+					<h2>Філія №2</h2>
+					<p>м. Місто</p>
+					<p>вул. Вулиця буд. 37</p>
+				</a>
+				<div class="line"></div>
+			</div>
+			<div class="hospital">
+				<a class="single_hospital" href="single_service.html">
+					<img src="img/hospital3.jpg" alt="hospital3">
+					<h2>Філія №3</h2>
+					<p>м. Місто</p>
+					<p>вул. Вулиця буд. 37</p>
+				</a>
+				<div class="line"></div>
+			</div>
+			<div class="hospital">
+				<a class="single_hospital" href="single_service.html">
+					<img src="img/hospital4.jpg" alt="hospital4">
+					<h2>Філія №4</h2>
+					<p>м. Місто</p>
+					<p>вул. Вулиця буд. 37</p>
+				</a>
+				<div class="line"></div>
+			</div>
 		</div>
+		<div class="contacts_page">
+			<section class="contacts_left">
+				<h1 class="typical_h1">НАШІ КООРДИНАТИ</h1>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83069.25004751666!2d26.92521898118743!3d49.410530798704876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4732064344bb178b%3A0xd9f30b3b24d9c964!2z0KXQvNC10LvRjNC90LjRhtC60LjQuSwg0KXQvNC10LvRjNC90LjRhtC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1497044497273" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<h2 class="typical_h2">НАПИШІТЬ НАМ</h2>
+				<form class="contacts_form" action="#">
+					<div class="form_group left">
+						<label for="f_c_name">Ваше iм'я:</label>
+						<input id="f_c_name" type="text" name="name">
+					</div>
+					<div class="form_group right">
+						<label for="f_c_email">Електронна пошта:</label>
+						<input id="f_c_email" type="email" name="email">
+					</div>
+					<div class="clearfix"></div>
+					<div class="form_group">
+						<label for="f_c_subject">Тема:</label>
+						<input id="f_c_subject" type="text" name="subject">
+					</div>
+					<div class="form_group text">
+						<label for="f_c_message">Повідомлення:</label>
+					<textarea id="message" name="message" rows="15"></textarea>
+					</div>
+					<button class="blueBut" type="submit">НАДІСЛАТИ</button>
+					<button class="blueBut" type="reset">ОЧИСТИТИ</button>
+				</form>
+			</section>
+			<aside class="filials">
+				<div class="hospital">
+					<a href="filia1.html">
+						<img src="img/hospital1.jpg" alt="hospital1">
+						<h2>Філія №1</h2>
+						<p>м. Місто</p>
+						<p>вул. Вулиця буд. 37</p>
+					</a>
+					<div class="line"></div>
+				</div>
+				<div class="hospital">
+					<a href="filia2.html">
+						<img src="img/hospital2.jpg" alt="hospital2">
+						<h2>Філія №2</h2>
+						<p>м. Місто</p>
+						<p>вул. Вулиця буд. 37</p>
+					</a>
+					<div class="line"></div>
+				</div>
+				<div class="hospital">
+					<a href="filia3.html">
+						<img src="img/hospital3.jpg" alt="hospital3">
+						<h2>Філія №3</h2>
+						<p>м. Місто</p>
+						<p>вул. Вулиця буд. 37</p>
+					</a>
+					<div class="line"></div>
+				</div>
+				<div class="hospital">
+					<a href="filia4.html">
+						<img src="img/hospital4.jpg" alt="hospital4">
+						<h2>Філія №4</h2>
+						<p>м. Місто</p>
+						<p>вул. Вулиця буд. 37</p>
+					</a>
+					<div class="line"></div>
+				</div>
+			</aside>
+		</div>
+		<div class="m_specialist_wrap">
 		<h2>Оберіть спеціаліста</h2>
 			<div class="m_specialist_hold">
 				<div id="m_specialist-carousel" class="owl-carousel">
@@ -216,12 +316,20 @@
 				<div class="m_range">
 					<input id="spec_control" class="spec_control" type="range" min="0" max="100" step="1" value="20">
 				</div>
+			</div>
+			<div class="i_dont_care">
+				<div class="blue_rect"></div>
+				<div class="light_blue_rect"></div>
+				<i class="fa fa-user-md"></i>
+				<h2>Обрати першого вільного</h2>
+				<p>Все заради вашого комфорту</p>
+				<button>ОБРАТИ</button>
 			</div>			
 		</div>
+	</div>	
 	</main>
-	</div><!--no_footer-->
 	<footer>
-		<div class="bline"></div>
+		<!--<div class="bline"></div>
 		<div class="line">
 			<div class="wrap clearfix">
 				<h3>
@@ -237,8 +345,100 @@
 					<a href="#">Часті питання</a>
 				</h3>
 			</div>
-		</div>	
+		</div>-->
+		<div class="wrap clearfix">
+			<div class="row">
+				<div class="f_section last_news">
+					<img src="img/last-news.png" alt="last news">
+					<h3><a href="about.html">CLINICO</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin justo non odio molestie, sed venenatis elit, consectetur adipiscing.</p>
+					<p>Donec quis condimentum leo, et congue dolor. Integer auctor facilisis odio. Duis vitae nibh tristique, consectetur lacus a, facilisis rutrum enim.</p>
+					<p>Cras fermentum interdum dapibus. Maecenas imperdiet, consectetur adipiscing magna nec odio cursus, vitae consequat ante.</p>
+				</div>
+				<div class="f_section location">
+					<img src="img/location.png" alt="location">
+					<h3><a href="cotacts.html">LOCATION</a></h3>
+					<p>Address will be appear here, some details here City Name, Country.
+					</p>
+					<a href="tel:(907) 555-55555"><i class="fa fa-phone"></i>
+					<p class="info">
+					 	(907) 555-55555
+					</p></a>
+					<a href="mailto:company@youremail.com"><i class="fa fa-at"></i>
+					<p class="info">
+						company@youremail.com
+					</p></a>
+					<a href="skype:SkypeUser?call"><i class="fa fa-skype"></i>
+					<p class="info">
+						Medical Skype Name
+					</p></a>
+					<nav>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-instagram"></a>
+					</nav>
+				</div>
+				<div class="f_section recent_posts">
+					<img src="img/recent-posts.png" alt="location">
+					<h3><a href="blog.html">RECENT POSTS</a></h3>
+					<article class="post clearfix">
+						<a href="#"><img src="img/1.png" alt="post img1" class="post_img"></a>
+						<div class="post_content_wrap">
+							<p class="post_content">
+								New study links lutein with eye health benefits, consectetur adipiscing
+							</p>
+							<p class="post_date">5 months ago</p>
+						</div>
+					</article>
+					<article class="post clearfix">
+						<a href="#"><img src="img/2.png" alt="post img1" class="post_img"></a>
+						<div class="post_content_wrap">
+							<p class="post_content">
+								Pets may reduce risk of heart disease, et congue dolor heart
+							</p>
+							<p class="post_date">8 months ago</p>
+						</div>
+					</article>
+					<article class="post clearfix">
+						<a href="#"><img src="img/3.png" alt="post img1" class="post_img"></a>
+						<div class="post_content_wrap">
+							<p class="post_content">
+								Discoveries offer a new explanation for diabetes, consectetur
+							</p>
+							<p class="post_date">10 months ago</p>
+						</div>
+					</article>	
+				</div>
+				<div class="f_section work_time">
+					<img src="img/work-time.png" alt="work time">
+					<dl>
+						<dt>Mon</dt>
+						<dd>08:00 am - 12:00 pm</dd>
+						<div class="line clearfix"></div>
+						<dt>Tue</dt>
+						<dd> 01:00 am - 05:00 pm</dd>
+						<div class="line clearfix"></div>
+						<dt>Wed</dt>
+						<dd>Free day</dd>
+						<div class="line clearfix"></div>
+						<dt>Thu</dt>
+						<dd>08:00 am - 12:00 pm</dd>
+						<div class="line clearfix"></div>
+						<dt>Fri</dt>
+						<dd>08:00 am - 12:00 pm</dd>
+						<div class="line clearfix"></div>
+						<dt>Sat</dt>
+						<dd>08:00 am - 12:00 pm</dd>
+						<div class="line clearfix"></div>
+						<dt>Sun</dt>
+						<dd>Free day</dd>
+						<button class="clearfix blueBut">MAKE AN APPOINTMENT</button>
+					</dl>
+				</div>
+			</div>	
+		</div>
 	</footer>
+	</div><!--main_wrap-->
 	<script src="js/jquery/jquery-3.1.1.min.js"></script>
 	<script src="js/owl/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
