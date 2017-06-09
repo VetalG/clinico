@@ -1,0 +1,1330 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 13, ../sass/includes/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 27, ../sass/includes/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 35, ../sass/includes/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 49, ../sass/includes/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 62, ../sass/includes/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 72, ../sass/includes/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 81, ../sass/includes/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 92, ../sass/includes/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 105, ../sass/includes/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 115, ../sass/includes/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 125, ../sass/includes/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 135, ../sass/includes/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 144, ../sass/includes/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 154, ../sass/includes/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 165, ../sass/includes/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 173, ../sass/includes/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 182, ../sass/includes/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 191, ../sass/includes/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 199, ../sass/includes/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 203, ../sass/includes/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 214, ../sass/includes/_normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 223, ../sass/includes/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 232, ../sass/includes/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 240, ../sass/includes/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 252, ../sass/includes/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 268, ../sass/includes/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 278, ../sass/includes/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 289, ../sass/includes/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 300, ../sass/includes/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 312, ../sass/includes/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 323, ../sass/includes/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 336, ../sass/includes/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 350, ../sass/includes/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, ../sass/includes/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, ../sass/includes/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, ../sass/includes/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, ../sass/includes/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 397, ../sass/includes/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 407, ../sass/includes/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 420, ../sass/includes/_normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 429, ../sass/includes/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 440, ../sass/includes/_normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 448, ../sass/includes/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 459, ../sass/includes/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'OpenSans-BoldItalic';
+  src: url("../fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url("../fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'OpenSans-ExtraBoldItalic';
+  src: url("../fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url("../fonts/OpenSans/OpenSans-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'OpenSans-LightItalic';
+  src: url("../fonts/OpenSans/OpenSans-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Semibold.otf");
+  src: url("../fonts/OpenSans/OpenSans-Semibold.eot");
+  src: url("../fonts/OpenSans/OpenSans-Semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'OpenSans-SemiboldItalic';
+  src: url("../fonts/OpenSans/OpenSans-SemiboldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 600;
+}
+/* Some Base CSS Rules */
+/*GENERAL STYLES*/
+/* line 8, ../sass/includes/_base.scss */
+body {
+  font-family: OpenSans-Regular, Arial, Helvetica, sans-serif;
+}
+
+/* line 12, ../sass/includes/_base.scss */
+img, iframe {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+@media \0screen {
+  /* line 19, ../sass/includes/_base.scss */
+  img {
+    width: auto;
+    /* for ie 8 */
+  }
+}
+/* line 24, ../sass/includes/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
+}
+
+/* line 29, ../sass/includes/_base.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 35, ../sass/includes/_base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 38, ../sass/includes/_base.scss */
+.hidden {
+  display: none;
+}
+
+/* line 41, ../sass/includes/_base.scss */
+.withNo {
+  opacity: 0;
+}
+
+/* line 44, ../sass/includes/_base.scss */
+.wrapper {
+  max-width: 1250px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 1, ../sass/includes/_typography.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/includes/_typography.scss */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/includes/_typography.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 13, ../sass/includes/_typography.scss */
+a:focus,
+input:focus,
+button:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 24, ../sass/includes/_typography.scss */
+p,
+a,
+h1,
+h2,
+h3,
+div {
+  color: #6d6e71;
+}
+
+/* header*/
+/* line 5, ../sass/_main.scss */
+html {
+  font-size: 16px;
+  height: 100%;
+}
+/* line 8, ../sass/_main.scss */
+html a:hover {
+  font-weight: bold;
+}
+/* line 11, ../sass/_main.scss */
+html body {
+  height: 100%;
+}
+
+/* line 15, ../sass/_main.scss */
+.no_footer {
+  min-height: 100%;
+  padding-bottom: 61px;
+}
+
+/* line 19, ../sass/_main.scss */
+footer {
+  margin-top: -61px;
+}
+
+/* line 23, ../sass/_main.scss */
+header .wrap {
+  padding: 5px;
+}
+/* line 26, ../sass/_main.scss */
+header .logo {
+  float: left;
+  width: 220px;
+}
+/* line 29, ../sass/_main.scss */
+header .logo img {
+  margin-left: 0;
+}
+/* line 33, ../sass/_main.scss */
+header .contacts {
+  float: right;
+  width: 260px;
+}
+/* line 36, ../sass/_main.scss */
+header .contacts li {
+  display: inline-block;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+/* line 41, ../sass/_main.scss */
+header .contacts li a {
+  color: #24A7ED;
+}
+/* line 44, ../sass/_main.scss */
+header .contacts li a:hover {
+  text-decoration: underline;
+}
+/* line 49, ../sass/_main.scss */
+header .header {
+  height: 400px;
+  background-image: url("../img/img-01.jpg");
+  background-position: right;
+  background-size: cover;
+  margin-bottom: -5px;
+}
+/* line 55, ../sass/_main.scss */
+header .header .m_slider {
+  float: left;
+  width: 50%;
+  padding-left: 4%;
+  padding-top: 60px;
+}
+/* line 60, ../sass/_main.scss */
+header .header .m_slider.owl-carousel {
+  z-index: 20;
+}
+/* line 63, ../sass/_main.scss */
+header .header .m_slider .owl-dots {
+  margin-bottom: -4%;
+}
+/* line 65, ../sass/_main.scss */
+header .header .m_slider .owl-dots .owl-dot {
+  background-color: #fff;
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+/* line 72, ../sass/_main.scss */
+header .header .m_slider .owl-dots .owl-dot.active {
+  background-color: #6BCDFC;
+  width: 12px;
+  height: 12px;
+}
+/* line 79, ../sass/_main.scss */
+header .header .m_slider h2 {
+  font-weight: 300;
+}
+/* line 81, ../sass/_main.scss */
+header .header .m_slider h2 .blue {
+  color: #24A7ED;
+}
+/* line 85, ../sass/_main.scss */
+header .header .m_slider p {
+  padding: 30px 0;
+}
+/* line 87, ../sass/_main.scss */
+header .header .m_slider p .blue {
+  color: #24A7ED;
+}
+/* line 91, ../sass/_main.scss */
+header .header .m_slider button {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 25px;
+  cursor: pointer;
+}
+/* line 97, ../sass/_main.scss */
+header .header .m_slider button:hover {
+  background-color: #24A7ED;
+  font-weight: bold;
+}
+
+/* line 105, ../sass/_main.scss */
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 109, ../sass/_main.scss */
+.bline {
+  height: 10px;
+  background-color: #24A7ED;
+}
+
+/* line 113, ../sass/_main.scss */
+.line, main .service .line {
+  background-color: #0B83D7;
+}
+/* line 115, ../sass/_main.scss */
+.line h1, main .service .line h1 {
+  color: #fff;
+  padding: 2px 5px 5px;
+}
+
+/* line 122, ../sass/_main.scss */
+main .service {
+  width: 33%;
+  float: left;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* line 129, ../sass/_main.scss */
+main .service .filter {
+  position: absolute;
+  width: 150%;
+  top: -5px;
+  left: -5px;
+  background-color: #24A7ED;
+  opacity: 0.3;
+}
+/* line 138, ../sass/_main.scss */
+main .service a:hover h2, main .service a:hover p {
+  background-color: #24A7ED;
+  color: #fff;
+}
+/* line 142, ../sass/_main.scss */
+main .service a:hover .filter {
+  height: 150%;
+}
+/* line 146, ../sass/_main.scss */
+main .service h2, main .service p {
+  padding: 5px 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 153, ../sass/_main.scss */
+main .service .line {
+  height: 10px;
+}
+
+/* line 159, ../sass/_main.scss */
+.Bread_crumbs {
+  padding-top: 20px;
+}
+/* line 161, ../sass/_main.scss */
+.Bread_crumbs span {
+  cursor: pointer;
+}
+/* line 163, ../sass/_main.scss */
+.Bread_crumbs span:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* line 169, ../sass/_main.scss */
+.sinlge_servise_viwer {
+  display: none;
+}
+/* line 171, ../sass/_main.scss */
+.sinlge_servise_viwer aside {
+  float: left;
+  width: 30%;
+}
+/* line 174, ../sass/_main.scss */
+.sinlge_servise_viwer aside h2 {
+  padding: 20px 0;
+}
+/* line 177, ../sass/_main.scss */
+.sinlge_servise_viwer aside li {
+  padding: 10px 5px;
+  border-bottom: 2px solid #24A7ED;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+/* line 182, ../sass/_main.scss */
+.sinlge_servise_viwer aside li:hover {
+  background-color: #24A7ED;
+  color: #fff;
+}
+/* line 188, ../sass/_main.scss */
+.sinlge_servise_viwer section {
+  float: left;
+  width: 70%;
+  padding-left: 20px;
+}
+/* line 192, ../sass/_main.scss */
+.sinlge_servise_viwer section h1 {
+  padding: 10px 0;
+}
+/* line 195, ../sass/_main.scss */
+.sinlge_servise_viwer section p {
+  padding: 5px 0;
+}
+/* line 198, ../sass/_main.scss */
+.sinlge_servise_viwer section img {
+  float: left;
+  max-width: 50%;
+  margin: 10px 10px 10px 0;
+}
+
+/* line 205, ../sass/_main.scss */
+.m_specialist_wrap {
+  display: none;
+  padding: 10px 0;
+}
+/* line 209, ../sass/_main.scss */
+.m_specialist_wrap h2 {
+  padding: 10px 0;
+  font-size: 40px;
+  font-weight: 300;
+}
+/* line 216, ../sass/_main.scss */
+.m_specialist_wrap .m_specialist_hold #spec_control {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* line 222, ../sass/_main.scss */
+.owl-carousel > .m_single_specialist {
+  float: left;
+  width: 33.333%;
+}
+
+/* line 226, ../sass/_main.scss */
+.m_single_specialist {
+  padding: 0 15px;
+}
+/* line 228, ../sass/_main.scss */
+.m_single_specialist:hover {
+  background-color: #24A7ED;
+}
+/* line 230, ../sass/_main.scss */
+.m_single_specialist:hover h3, .m_single_specialist:hover p {
+  color: #fff;
+}
+/* line 233, ../sass/_main.scss */
+.m_single_specialist:hover img.thumb {
+  opacity: 0.7;
+}
+/* line 237, ../sass/_main.scss */
+.m_single_specialist img.thumb {
+  padding: 10px;
+  cursor: pointer;
+}
+/* line 241, ../sass/_main.scss */
+.m_single_specialist .specialist_info {
+  padding: 10px;
+  cursor: pointer;
+}
+/* line 244, ../sass/_main.scss */
+.m_single_specialist .specialist_info h3 {
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #6D6E71;
+}
+/* line 250, ../sass/_main.scss */
+.m_single_specialist .specialist_info .just_blue_rectangle {
+  margin-top: -1px;
+  width: 30px;
+  height: 3px;
+  background-color: #6BCDFC;
+}
+/* line 256, ../sass/_main.scss */
+.m_single_specialist .specialist_info p {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+/*********************rangeStart*****************************************************************/
+/* line 263, ../sass/_main.scss */
+input[type=range].spec_control {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* line 268, ../sass/_main.scss */
+input[type=range].spec_control:focus {
+  outline: none;
+}
+
+/* line 271, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 280, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+/* line 291, ../sass/_main.scss */
+input[type=range].spec_control:focus::-webkit-slider-runnable-track {
+  background: #3333ff;
+}
+
+/* line 294, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 303, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* line 312, ../sass/_main.scss */
+input[type=range].spec_control::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* line 320, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-lower {
+  background: #0000cc;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 326, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-upper {
+  background: #0000ff;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 332, ../sass/_main.scss */
+input[type=range].spec_control::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 10px;
+}
+
+/* line 342, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-lower {
+  background: #0000ff;
+}
+
+/* line 345, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-upper {
+  background: #3333ff;
+}
+
+/* line 348, ../sass/_main.scss */
+input[type=range].spec_control {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* line 353, ../sass/_main.scss */
+input[type=range].spec_control:focus {
+  outline: none;
+}
+
+/* line 356, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 365, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+/* line 376, ../sass/_main.scss */
+input[type=range].spec_control:focus::-webkit-slider-runnable-track {
+  background: #3333ff;
+}
+
+/* line 379, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 388, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* line 397, ../sass/_main.scss */
+input[type=range].spec_control::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* line 405, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-lower {
+  background: #0000cc;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 411, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-upper {
+  background: #0000ff;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 417, ../sass/_main.scss */
+input[type=range].spec_control::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 10px;
+}
+
+/* line 427, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-lower {
+  background: #0000ff;
+}
+
+/* line 430, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-upper {
+  background: #3333ff;
+}
+
+/* line 433, ../sass/_main.scss */
+input[type=range].spec_control {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* line 438, ../sass/_main.scss */
+input[type=range].spec_control:focus {
+  outline: none;
+}
+
+/* line 441, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 450, ../sass/_main.scss */
+input[type=range].spec_control::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+/* line 461, ../sass/_main.scss */
+input[type=range].spec_control:focus::-webkit-slider-runnable-track {
+  background: #3333ff;
+}
+
+/* line 464, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+  background: #0000ff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+/* line 473, ../sass/_main.scss */
+input[type=range].spec_control::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* line 482, ../sass/_main.scss */
+input[type=range].spec_control::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* line 490, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-lower {
+  background: #0000cc;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 496, ../sass/_main.scss */
+input[type=range].spec_control::-ms-fill-upper {
+  background: #0000ff;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 0px #005900, 0px 0px 0.1px #007200;
+}
+
+/* line 502, ../sass/_main.scss */
+input[type=range].spec_control::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0.67), 0px 0px 0px rgba(0, 0, 88, 0.67);
+  border: 0.4px solid rgba(0, 30, 0, 0.57);
+  height: 30px;
+  width: 17px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 10px;
+}
+
+/* line 512, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-lower {
+  background: #0000ff;
+}
+
+/* line 515, ../sass/_main.scss */
+input[type=range].spec_control:focus::-ms-fill-upper {
+  background: #3333ff;
+}
+
+/*********************rangeFinish*****************************************************************/
+/* line 522, ../sass/_main.scss */
+footer h3 {
+  float: left;
+  width: 25%;
+  padding: 10px 5px 20px 0px;
+}
+/* line 526, ../sass/_main.scss */
+footer h3 a {
+  color: #fff;
+}
+/* line 529, ../sass/_main.scss */
+footer h3 a:hover {
+  text-decoration: underline;
+}
+
+/*footer*/
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
