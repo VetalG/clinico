@@ -168,9 +168,10 @@ main{
 	}
 	.line{
 		@extend.line;
-		height: 8px;;
+		height: 8px;
 	}
 }
+
 .Bread_crumbs{
 	display: none;
 	float: right;
@@ -195,7 +196,7 @@ main{
 		float:left;
 		width: 30%;
 		h2{
-			padding: 20px 0;
+			margin-top:17px;
 		}
 		li{
 			padding:10px 5px;
@@ -212,9 +213,6 @@ main{
 		float:left;
 		width: 70%;
 		padding-left:20px;
-		h1{	
-			padding: 10px 0;
-		}
 		p{
 			padding:5px 0;
 		}
@@ -231,18 +229,13 @@ main{
 	h1{
 		margin-left:5px;
 	}
-	.hospital{
-		@extend .service;
-	}
+}
+.hospital{
+	@extend .service;
 }
 .m_specialist_wrap{
 	display: none;
 	padding: 10px 0;
-	h2{
-		padding: 10px 0;
-		font-size: 40px;
-		font-weight: 300;
-	}
 	.m_specialist_hold{
 		#spec_control{
 			width: 100%;
@@ -276,26 +269,26 @@ main{
 	img.thumb{
 	cursor: pointer;	
 	}
-	.specialist_info{
-		padding: 10px;
-		cursor: pointer;
-		text-align: center;
-		h3 {
-			font-weight: bold;
-			font-size: 22px;
-			padding-bottom: 10px;
-			border-bottom: 1px solid #6D6E71;
-		}
-		.just_blue_rectangle{
-			margin-top: -1px;
-			width: 30px;
-			height: 3px;
-			background-color: #6BCDFC;
-		}
-		p {	
-			padding-top: 10px;
-			font-size: 18px;
-		}
+}
+.specialist_info{
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	h3 {
+		font-weight: bold;
+		font-size: 22px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #6D6E71;
+	}
+	.just_blue_rectangle{
+		margin-top: -1px;
+		width: 30px;
+		height: 3px;
+		background-color: #6BCDFC;
+	}
+	p {	
+		padding-top: 10px;
+		font-size: 18px;
 	}
 }
 .m_range{
@@ -640,7 +633,7 @@ $grey:#F5F5F5;
 	font-size: 1.6rem;
 }
 
-.contacts_form{
+form{
 	label{
 		display:block;
 		margin:10px 0;
@@ -648,11 +641,6 @@ $grey:#F5F5F5;
 	}
 	.form_group{
 		margin:10px 0;
-	}
-	input, textarea{
-		width:100%;
-		line-height: 30px;
-		font-size: 20px;
 	}
 	.form_group.left{
 		float: left;
@@ -665,16 +653,175 @@ $grey:#F5F5F5;
 	.form_group.text{
 		margin:20px 0;
 	}
-	button.blueBut{
-		background-color: $fon;
-		border:none;
-		margin:0 0 10px 0;
-		&:hover{
-			background-color: $bfon;
-			border:none;
+	input, textarea{
+		width:100%;
+		line-height: 30px;
+		font-size: 20px;
+		resize: none;
+		border: 2px solid darken(#F5F5F5, 20%);
+		border-radius:5px;
+		&:active{
+			border: 2px solid $fon;
 		}
 	}
 }
+.appointment_form{
+	padding-top: 20px;	
+	padding-right: 20px;
+	textarea{
+		height: 150px;
+	}	
+}
+
+button.light{
+	background-color: $fon;
+	border:2px solid $fon;
+	padding: 10px;
+	border-radius:5px;
+	margin:0 0 10px 0;
+	color:$white;
+	cursor: pointer;
+	&:hover{
+		background-color: $bfon;
+		border:2px solid $fon;
+		border-radius:5px;
+	}
+}
+.calendar{
+	border-top:10px solid $bfon;
+	border-left:10px solid $bfon;
+	font-size: 0;
+	.date{
+		background-color: $fon;
+		border-right:10px solid $bfon;
+		border-bottom:10px solid $bfon;
+		color:$white;
+		display: inline-block;
+		font-size: 1.4rem;
+		cursor: pointer;
+		line-height: 50px;
+		vertical-align: middle;
+		text-align: center;
+		ul li {
+			white-space: nowrap;
+  			overflow: hidden;
+  			text-overflow: ellipsis;
+		}
+		ul li:last-child{
+			display: none;
+		}
+		&:hover{
+			background-color: $grey;
+			color:$fon;
+			ul li:first-child{
+				display: none;
+			}
+			ul li:last-child{
+				display: block;
+			}
+		}
+	}
+}
+button.moreDates{
+	margin:10px 0;
+	float: right;
+}
+.Make_an_Appointment{
+	display: none;
+}
+.appointment_holder{
+	.appointment{
+		float: left;
+		width: 66.666%;
+		ul{
+			float: left;
+			width: 50%;
+			padding-right: 20px;
+			li{
+				padding:10px 5px;
+				border-bottom:2px solid $fon;
+				font-size: 1.2rem;
+				text-align: center;
+			}
+			li.available{
+				cursor: pointer;
+				&:hover{
+					background-color: $fon;
+					color:$white;
+				}
+			}
+			li.not_available{
+				cursor: default;
+				background-color: $grey;
+				&:hover{
+					background-color: red;
+					color:$white;
+				}
+			}
+			li.chosen{
+				background-color: $bfon;
+				color:$white;
+				&:hover{
+					background-color: Lime;
+				}
+			}
+		}
+		.change_desc{
+			padding: 20px 20px 20px 0;
+			div {
+				float: left;
+				width: 100px;
+				padding:10px 5px;
+				border:2px solid $fon;
+				font-size: 1.2rem;
+				text-align: center;
+				margin-right:20px;
+				cursor: default;
+				&.available_expample{
+					background-color: #FFF;
+					&:hover{
+						background-color: $fon;
+						color:$white;
+					}
+				}
+				&.not_available_expample{
+					background-color: $grey;
+						&:hover{
+						background-color: red;
+						color:$white;
+					}
+				}
+				&.your_choice{
+					background-color: $bfon;
+					color:$white;
+					&:hover{
+						background-color: Lime;
+					}
+				}
+			}
+		}
+	}
+	.spec_hosp{
+		background-color: $grey;
+		float: left;
+		width: 33.333%;
+		.sh_single_specialist{
+			padding: 5px;
+			margin-bottom:20px;
+			.specialist_info{
+				cursor: default;
+			}
+			.line{
+			height: 8px;
+			}
+		}
+		.hospital{
+			width: 100%;
+		}
+		
+	}
+}
+
 
 footer{
 	/*h3{

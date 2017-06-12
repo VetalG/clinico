@@ -33,7 +33,9 @@
 				<div class="Bread_crumbs">
 					<span class="root">Services</span> <span> &gt; </span>	
 					<span class="root1">Filials</span> <span> &gt; </span>
-					<span class="root2">Specialists</span>
+					<span class="root2">Specialists</span> <span> &gt; </span>
+					<span class="root3">Date</span> <span> &gt; </span>
+					<span class="root4">Time</span>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -141,7 +143,7 @@
 		</div>
 		<div class="sinlge_servise_viwer clearfix">
 			<aside>
-				<ul><h2>ОБЕРІТЬ ПОСЛУГУ</h2>
+				<ul><h2 class="typical_h2">ОБЕРІТЬ ПОСЛУГУ</h2>
 					<li>ПОСЛУГА НОМЕР 1</li>
 					<li>ПОСЛУГА НОМЕР 2</li>
 					<li>ПОСЛУГА НОМЕР 3</li>
@@ -153,7 +155,7 @@
 				</ul>
 			</aside>
 			<section>
-				<h1>РОЗДІЛ ПОСЛУГ ТАКИХ ТО</h1>
+				<h1 class="typical_h1">РОЗДІЛ ПОСЛУГ ТАКИХ ТО</h1>
 				<img src="img/slide4_s88_t7849_i5087.jpg" alt="servise">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur laboriosam reiciendis odio maxime amet ducimus error, laborum ratione quos sed veniam temporibus dolorum illum! Sequi impedit reiciendis vel aut natus.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, voluptates? Beatae quae doloribus qui ex, autem temporibus et maxime ut doloremque incidunt eaque nihil tempora esse perferendis voluptatum, veniam, id. ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illum obcaecati facere vero labore sapiente aspernatur laboriosam excepturi, illo tempore mollitia cupiditate voluptatem, deserunt eos molestiae nihil totam repellendus amet.</p>
@@ -222,10 +224,11 @@
 					</div>
 					<div class="form_group text">
 						<label for="f_c_message">Повідомлення:</label>
-					<textarea id="message" name="message" rows="15"></textarea>
+					<textarea id="f_c_message" name="message" rows="15"></textarea>
 					</div>
-					<button class="blueBut" type="submit">НАДІСЛАТИ</button>
-					<button class="blueBut" type="reset">ОЧИСТИТИ</button>
+					<button class="light" type="submit">НАДІСЛАТИ</button>
+					<button class="light" type="reset">ОЧИСТИТИ</button>
+					<div class="clearfix"></div>
 				</form>
 			</section>
 			<aside class="filials">
@@ -266,9 +269,10 @@
 					<div class="line"></div>
 				</div>
 			</aside>
+			<div class="clearfix"></div>
 		</div>
 		<div class="m_specialist_wrap">
-		<h2>Оберіть спеціаліста</h2>
+		<h1 class="typical_h1">ОБЕРІТЬ СПЕЦІАЛІСТА</h1>
 			<div class="m_specialist_hold">
 				<div id="m_specialist-carousel" class="owl-carousel">
 					<div class="m_single_specialist">
@@ -325,6 +329,94 @@
 				<p>Все заради вашого комфорту</p>
 				<button>ОБРАТИ</button>
 			</div>			
+		</div>
+		<div class="calendar_holder">
+			<h1 class="typical_h1">ОБЕРІТЬ ДАТУ</h1>
+			<ul class="calendar clearfix">	
+				<li class="date">
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+			<button class="moreDates light">Показати Більше</button>
+			<div class="clearfix"></div>
+		</div>
+		<div class=Make_an_Appointment>
+			<h1 class="typical_h1">ОБЕРІТЬ ЧАС ПРИЙОМУ</h1>
+			<div class="appointment_holder clearfix">
+				<div class="appointment">
+					<div class="change_desc clearfix">
+						<div class="available_expample">Вільні години</div>
+						<div class="not_available_expample">Зайняті години</div>
+						<div class="your_choice">Ваша бронь</div>
+					</div>	
+					<ul>
+						<li class="available">9:00 - 9:30</li>
+						<li class="available">9:30 - 10:00</li>
+						<li class="available">10:00 - 10:30</li>
+						<li class="not_available">10:30 - 11:00</li>
+						<li class="available">11:00 - 11:30</li>
+						<li class="available">11:30 - 12:00</li>
+						<li class="not_available">12:00 - 12:30</li>
+						<li class="available">12:30 - 13:00</li>
+					</ul>
+					<ul>
+						<li class="available">14:00 - 14:30</li>
+						<li class="not_available">14:30 - 15:00</li>
+						<li class="not_available">15:00 - 15:30</li>
+						<li class="available">15:30 - 16:00</li>
+						<li class="available">16:00 - 16:30</li>
+						<li class="available">16:30 - 17:00</li>
+						<li class="available">17:00 - 17:30</li>
+						<li class="available">17:30 - 18:00</li>
+					</ul>
+					<div class="clearfix"></div>
+					<form class="appointment_form" action="#">
+					<div class="form_group">
+						<label for="f_c_name">Ваше повне iм'я:</label>
+						<input id="f_c_name" type="text" name="name">
+					</div>
+					<div class="form_group left">
+						<label for="f_c_email">Електронна пошта:</label>
+						<input id="f_c_email" type="email" name="email">
+					</div>
+					<div class="form_group right">
+						<label for="f_c_subject">Телефон:</label>
+						<input id="f_c_subject" type="tel" name="subject">
+					</div>
+					<div class="clearfix"></div>
+					<div class="form_group text">
+						<label for="f_c_message">Додаткові відомості:</label>
+					<textarea id="f_c_message" name="message" rows="15"></textarea>
+					</div>
+					<button class="light" type="submit">ЗАБРОНЮВАТИ</button>
+					<button class="light" type="reset">ОЧИСТИТИ</button>
+					<div class="clearfix"></div>
+				</form>
+				</div>
+				<div class="spec_hosp">
+					<div class="sh_single_specialist">
+						<img class="thumb" src="img/pic-team-8.jpg">
+						<div class="specialist_info">
+							<h3>Фамілія Ім'я Побатькові</h3>
+							<div class="just_blue_rectangle"></div>
+							<p>
+								Опис того який він молодець. Кандидат медичних наук і всяке таке.
+							</p>
+						</div>
+						<div class="line"></div>	
+					</div>
+					<div class="hospital">
+						<img src="img/hospital1.jpg" alt="hospital1">
+						<h2>Філія №1</h2>
+						<p>м. Місто</p>
+						<p>вул. Вулиця буд. 37</p>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>	
 	</main>
