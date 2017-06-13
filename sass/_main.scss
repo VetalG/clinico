@@ -1,7 +1,8 @@
-$rem:16px;
+$rem:17px;
 $fon:#24A7ED;
 $bfon:#0B83D7;
 $white:#fff;
+$asideFon:#E5E3DF;
 html{
 	font-size:$rem;
 	height: 100%;
@@ -21,7 +22,7 @@ html{
 	}
 }
 header{
-	.wrap{
+	.wrap_top{
 		padding:5px;
 	}
 	.line{
@@ -38,7 +39,6 @@ header{
 	}
 	.contacts{
 		float:right;
-		width:260px;
 		li{
 			display:inline-block;
 			padding:10px;
@@ -58,61 +58,67 @@ header{
 			}
 		}
 	}
-	.header{
-		height: 400px;
-		background-image: url('../img/img-01.jpg');
-		background-position: right;
-		background-size: cover;
-		margin-bottom:-5px;
-		.m_slider {
+	.m_slider {
+		.single_promo{
+			min-height: 380px;			
+			background-position: right;
+			background-size: cover;
+		}
+		.single_promo_slide_1{
+			background-image: url('../img/slider-1-light-1.jpg');
+		}
+		.single_promo_slide_2{
+			background-image: url('../img/slider-1-light-2.jpg');
+		}
+		.single_promo_slide_3{
+			background-image: url('../img/slider-1-light-3.jpg');
+		}
+		.single_promo_slide_4{
+			background-image: url('../img/slider-1-light-4.jpg');
+		}
+		.single_promo_wrapper{
 			float: left;
 			width: 50%;
 			padding-left: 4%;
-			padding-top: 60px;
-			&.owl-carousel{
-				z-index: 20;
-			}
-			.owl-dots{
-				margin-bottom:-4%;
-				.owl-dot{
-					background-color: #fff;
-					width: 9px;
-					height: 9px;
-					display: inline-block;
-					margin-right: 12px;
-					vertical-align:middle;
-					&.active{
-						background-color: #6BCDFC;
-						width: 12px;
-						height: 12px;
-					}
+			padding-top: 60px;	
+		}
+		.owl-dots{
+			position: absolute;
+			bottom: 20px;
+			left: 4%;
+			.owl-dot{
+				background-color: #fff;
+				width: 9px;
+				height: 9px;
+				display: inline-block;
+				margin-right: 12px;
+				vertical-align:middle;
+				border:1px solid grey;
+				&.active{
+					background-color: #6BCDFC;
+					width: 12px;
+					height: 12px;
 				}
 			}
-			h2 {
-				font-weight: 300;
-				.blue {
-					color: $fon;
-				}
+		}
+		h2 {
+			font-weight: 300;
+			.blue {
+				color: $fon;
 			}
-			p {
-				padding: 30px 0;
-				.blue {
-					color: $fon;
-				}
+		}
+		p {
+			padding: 30px 0;
+			.blue {
+				color: $fon;
 			}
-			a .blue:hover{
-				font-weight: bold;
-			}
-			button {
-				margin-top: 5px;
-				margin-bottom: 40px;
-				background-color: $white;
-				padding:25px;
-				cursor: pointer;
-				&:hover{
-					background-color:$fon;
-				}
-			}
+		}
+		a .blue:hover{
+			font-weight: bold;
+		}
+		button {
+			padding:15px;
+			font-size: 1.3rem;
 		}
 	}
 }
@@ -142,6 +148,10 @@ main{
 	#services{
 		margin:0 -5px;
 		overflow: hidden;
+			h1{
+				margin-left: 5px;
+				margin-right: 5px;
+			}
 	}
 }
 .service{
@@ -171,6 +181,9 @@ main{
 		height: 8px;
 	}
 }
+.thin_line{
+	height: 8px;
+}
 
 .Bread_crumbs{
 	display: none;
@@ -181,45 +194,36 @@ main{
 		display: none;
 		line-height: 45px;	
 		vertical-align: middle;
-		&:nth-child(odd){
-			cursor:pointer;
+		cursor:pointer;
+		&:hover{
+			text-shadow: 2px 2px 1px $asideFon, -2px -2px 1px black;
 		}
-		&:nth-child(odd):hover{
-			font-weight: bold;
+		&:after{
+			content: " \f054";
+			font-size: 0.8rem;
+		}
+	}
+	span:last-child{
+		&:after{
+			content: "";
 		}
 	}
 }
 .sinlge_servise_viwer{
 	display: none;
-	aside{
-		padding-left:5px;
-		float:left;
-		width: 30%;
-		h2{
-			margin-top:17px;
-		}
-		li{
-			padding:10px 5px;
-			border-bottom:2px solid $fon;
-			cursor: pointer;
-			font-size: 1.2rem;
-			&:hover{
-				background-color: $fon;
-				color:$white;
-			}
-		}
+	.typical_h1{
+		margin-left:5px;
+		margin-right:5px;
 	}
-	section{
-		float:left;
-		width: 70%;
-		padding-left:20px;
-		p{
-			padding:5px 0;
+	.single_service_holder{
+		@extend .service;
+		h2,p{
+			white-space: normal;
 		}
-		img{
-			float: left;
-			max-width: 50%;
-			margin:10px 10px 10px 0;
+		a:hover{
+			.service_info{
+				background-color: $fon;
+			}
 		}
 	}
 }
@@ -289,6 +293,32 @@ main{
 	p {	
 		padding-top: 10px;
 		font-size: 18px;
+	}
+}
+.m_specialist_hold{
+	&:hover{
+		.owl-nav{
+			display: block;
+		}
+	}
+	.owl-nav{
+		display: none;
+		.owl-prev, .owl-next{
+			position: absolute;
+			top:40%;
+			transform:translateY(-50%);
+			opacity:0.5;
+			padding: 10px;
+			&:hover{
+				opacity:0.8;
+			}
+		}
+		.owl-prev{
+			left:-35px;
+		}
+		.owl-next{
+			right:-35px;
+		}
 	}
 }
 .m_range{
@@ -617,12 +647,12 @@ $grey:#F5F5F5;
 		.hospital{
 			@extend .service;
 			width: 100%;
-			background-color: $grey;
+			background-color: $asideFon;
 		}
 	}
 }
 .typical_h1{
-	font-size: 2rem;
+	font-size: 1.8rem;
 	margin: 10px 0;
 	padding: 0 10px;
 	border-left:4px solid $fon;
@@ -630,7 +660,7 @@ $grey:#F5F5F5;
 }
 .typical_h2{
 	@extend .typical_h1;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 }
 
 form{
@@ -655,36 +685,35 @@ form{
 	}
 	input, textarea{
 		width:100%;
-		line-height: 30px;
-		font-size: 20px;
-		resize: none;
+		padding: 5px;
+		line-height: 150%;
+		font-size: 1rem;
 		border: 2px solid darken(#F5F5F5, 20%);
 		border-radius:5px;
 		&:active{
 			border: 2px solid $fon;
 		}
 	}
+	textarea{
+		min-height:30px;
+		resize: vertical;
+	}
 }
 .appointment_form{
 	padding-top: 20px;	
-	padding-right: 20px;
-	textarea{
-		height: 150px;
-	}	
+	padding-right: 20px;	
 }
 
 button.light{
-	background-color: $fon;
-	border:2px solid $fon;
+	background-color: #213540;
+	border:3px solid $fon;
 	padding: 10px;
-	border-radius:5px;
 	margin:0 0 10px 0;
-	color:$white;
+	color:$fon;
 	cursor: pointer;
 	&:hover{
-		background-color: $bfon;
-		border:2px solid $fon;
-		border-radius:5px;
+		border:3px solid $white;
+		color:$white;
 	}
 }
 .calendar{
@@ -743,66 +772,26 @@ button.moreDates{
 				font-size: 1.2rem;
 				text-align: center;
 			}
-			li.available{
-				cursor: pointer;
-				&:hover{
-					background-color: $fon;
-					color:$white;
-				}
-			}
-			li.not_available{
-				cursor: default;
-				background-color: $grey;
-				&:hover{
-					background-color: red;
-					color:$white;
-				}
-			}
-			li.chosen{
-				background-color: $bfon;
-				color:$white;
-				&:hover{
-					background-color: Lime;
-				}
-			}
 		}
 		.change_desc{
 			padding: 20px 20px 20px 0;
 			div {
 				float: left;
-				width: 100px;
+				width: 30.666%;
 				padding:10px 5px;
 				border:2px solid $fon;
 				font-size: 1.2rem;
 				text-align: center;
-				margin-right:20px;
+				margin-right:4%;
 				cursor: default;
-				&.available_expample{
-					background-color: #FFF;
-					&:hover{
-						background-color: $fon;
-						color:$white;
-					}
-				}
-				&.not_available_expample{
-					background-color: $grey;
-						&:hover{
-						background-color: red;
-						color:$white;
-					}
-				}
-				&.your_choice{
-					background-color: $bfon;
-					color:$white;
-					&:hover{
-						background-color: Lime;
-					}
-				}
+			}
+			.last_desc{
+				margin-right:0;
 			}
 		}
 	}
 	.spec_hosp{
-		background-color: $grey;
+		background-color: $asideFon;
 		float: left;
 		width: 33.333%;
 		.sh_single_specialist{
@@ -821,7 +810,36 @@ button.moreDates{
 		
 	}
 }
-
+.available{
+	cursor: pointer;
+	&:hover{
+		background-color: $fon;
+		color:$white;
+	}
+}
+div.not_available{
+	cursor: pointer!important;
+}
+.not_available{
+	cursor: url('../img/not_avaliable.png'),crosshair;
+	background-color: $asideFon;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	&:hover{
+		border-color: red!important;
+		color:$white;
+	}
+	&:active{
+		background-color: red;
+	}
+}
+.chosen{
+	background-color: $bfon;
+	color:$white;
+	&:hover{
+		background-color: Lime;
+	}
+}
 
 footer{
 	/*h3{
