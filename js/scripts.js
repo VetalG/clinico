@@ -145,12 +145,16 @@ window.onload=function(){
   printCalendar();
 
   function printCalendar(){
+    var currentMonth=start.getMonth();
     monthYear.innerHTML=start.toLocaleString("ua", {month:'long'}) + ' ' + start.getFullYear();
     start.setDate(1);
     if(start.getDay()!=0) start.setDate(1-(start.getDay()-1));
-    else start.setDate(-6);
+    else start.setDate(start.getDate()-6);
     $(".avaliableDate").unbind();
-    $(date).removeClass('notAvaliableDate avaliableDate today');
+    $(date).removeClass('notAvaliableDate avaliableDate today anotherMonth');
+    /*if (currentMonth>today.getMonth()) {
+        $(date).addClass('avaliableDate');
+    } else{}*/
     for (var i = 0; i < date.length; i++) {
         switch(true){
             case start<today: $(date[i]).addClass('notAvaliableDate');
@@ -160,6 +164,7 @@ window.onload=function(){
             default: $(date[i]).addClass('today avaliableDate'); 
         }        
         date[i].innerHTML=start.getDate();
+        if (currentMonth!=start.getMonth()) $(date[i]).addClass('anotherMonth');
         start.setDate(start.getDate()+1);
     }
     $(".avaliableDate").click(function(){
