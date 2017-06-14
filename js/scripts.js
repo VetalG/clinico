@@ -29,15 +29,6 @@ window.onload=function(){
         $(".calendar_holder, .root3").fadeIn(500);
   });
 
-   $('.moreDates').click(function(){
-        printCalendar();
-        $(".date").click(function(){
-        $(".m_specialist_wrap, .calendar_holder").fadeOut(500);
-        $(".Make_an_Appointment").delay(500);
-        $(".Make_an_Appointment, .Bread_crumbs .root4").fadeIn(500);
-        });
-   });
-
   function OneLineImg(stringSelectorImgColection){
     var colection=$(stringSelectorImgColection), MaxH=0;
     colection.css('height', 'auto');
@@ -72,6 +63,7 @@ window.onload=function(){
 	speed=1000;
 
   owlSpec.owlCarousel({
+    items: 3,
   	autoplay: false,
   	autoplayTimeout: 3000,
   	autoplaySpeed: speed,
@@ -112,28 +104,69 @@ window.onload=function(){
   });
 
   //calendar
-  var calendar=document.querySelector('.calendar'), date=document.querySelector('.date'), now = new Date();
-
-  date.style.width=calendar.clientWidth/5+'px';
-  document.querySelector('.calendar_holder').style.display='none';
+  var calendar=document.querySelector('.calendar'),
+      date=document.querySelectorAll('.date'),
+      monthYear=document.querySelector('.monthYear span');
+      today = new Date(), 
+      start = new Date();
   
-  date.querySelector('ul li:first-child').innerHTML=now.toLocaleString("ua", {day: 'numeric', month: 'long'});
-  date.querySelector('ul li:last-child').innerHTML=now.toLocaleString("ua", {weekday: 'long'});
-  now.setDate(now.getDate()+1);
-  if(now.getDate()>20) printCalendar();
-  $('.moreDates').trigger('click');
+    $('.monthYear img:first-of-type').click(function(){
+        if(start.getMonth()>today.getMonth()+1){
+            $(calendar).animate({
+                'left': '100%'
+            });
+            $(calendar).animate({
+                'opacity': '0',
+                'left': '-100%'
+            },0);
+            start.setMonth(start.getMonth()-2);
+            setTimeout(printCalendar, 400);
+            $(calendar).animate({
+                'opacity': '1',
+                'left': '0'
+            });
+        }
+    });
+    $('.monthYear img:last-of-type').click(function(){
+        $(calendar).animate({
+            'left': '-100%'
+        });
+        $(calendar).animate({
+            'opacity': '0',
+            'left': '100%'
+        },0);
+        setTimeout(printCalendar, 400);
+        $(calendar).animate({
+            'opacity': '1',
+            'left': '0'
+        });
+    });
+
+  printCalendar();
 
   function printCalendar(){
-    var temp;
-    do{
-        if (now.getDay()!=0 && now.getDay()!=6) {
-            temp=date.cloneNode(true);
-            temp.querySelector('ul li:first-child').innerHTML=now.toLocaleString("ua", {day: 'numeric', month: 'long'});
-            temp.querySelector('ul li:last-child').innerHTML=now.toLocaleString("ua", {weekday: 'long'});
-            calendar.appendChild(temp);
-        }
-        now.setDate(now.getDate()+1);
-    }while(now.getDate()!=1);
+    monthYear.innerHTML=start.toLocaleString("ua", {month:'long'}) + ' ' + start.getFullYear();
+    start.setDate(1);
+    if(start.getDay()!=0) start.setDate(1-(start.getDay()-1));
+    else start.setDate(-6);
+    $(".avaliableDate").unbind();
+    $(date).removeClass('notAvaliableDate avaliableDate today');
+    for (var i = 0; i < date.length; i++) {
+        switch(true){
+            case start<today: $(date[i]).addClass('notAvaliableDate');
+            break;
+            case start>today: $(date[i]).addClass('avaliableDate');
+            break;
+            default: $(date[i]).addClass('today avaliableDate'); 
+        }        
+        date[i].innerHTML=start.getDate();
+        start.setDate(start.getDate()+1);
+    }
+    $(".avaliableDate").click(function(){
+        $(".m_specialist_wrap, .calendar_holder").fadeOut(500);
+        $(".Make_an_Appointment").delay(500);
+        $(".Make_an_Appointment, .Bread_crumbs .root4").fadeIn(500);
+    });
   }
 
    //time

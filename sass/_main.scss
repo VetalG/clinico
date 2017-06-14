@@ -716,45 +716,67 @@ button.light{
 		color:$white;
 	}
 }
-.calendar{
-	border-top:10px solid $bfon;
-	border-left:10px solid $bfon;
-	font-size: 0;
-	.date{
-		background-color: $fon;
-		border-right:10px solid $bfon;
-		border-bottom:10px solid $bfon;
-		color:$white;
-		display: inline-block;
-		font-size: 1.4rem;
-		cursor: pointer;
-		line-height: 50px;
+.calendar_holder{
+	display: none;
+	overflow: hidden;
+	.typical_h1{
+		float: left;
+	}
+	.monthYear{
+		padding-right: 20px;
+		float: right;
+		font-size: 1.6rem;
+		line-height: 30px;
 		vertical-align: middle;
-		text-align: center;
-		ul li {
-			white-space: nowrap;
-  			overflow: hidden;
-  			text-overflow: ellipsis;
-		}
-		ul li:last-child{
-			display: none;
-		}
-		&:hover{
-			background-color: $grey;
-			color:$fon;
-			ul li:first-child{
-				display: none;
-			}
-			ul li:last-child{
-				display: block;
-			}
+		margin:10px 0;
+		img{
+			padding: 10px;
+			cursor: pointer;
+			display: inline-block;
+			height: 50px;
+			margin-bottom:-17px;
 		}
 	}
 }
-button.moreDates{
-	margin:10px 0;
-	float: right;
+.calendar{
+	position: relative;
+	width: 100%;
+	//border-collapse: collapse;
+	.date, th{
+		font-size: 1.4rem;
+		line-height: 50px;
+		vertical-align: middle;
+		text-align: center;
+		white-space: nowrap;
+  		overflow: hidden;
+  		text-overflow: ellipsis;
+  		
+	}
+	.date{
+		border:10px solid $bfon;
+		color:$white;
+  		background-color: $fon;		
+	}
+	th{
+		cursor: default;
+		//background-color: $asideFon;
+	}
+	.today{
+		border:10px solid DarkBlue;
+	}
+	.avaliableDate{
+		cursor: pointer;
+		&:hover{
+			background-color: $white;
+			color:$fon;
+		}
+	}
+	.notAvaliableDate{
+		cursor: default;
+		opacity: 0.7;
+	}
 }
+
 .Make_an_Appointment{
 	display: none;
 }
