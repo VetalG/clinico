@@ -23,10 +23,11 @@ window.onload=function(){
        return false;
   });
 
-  $(".m_single_specialist, .i_dont_care button").click(function(){
-        $(".m_specialist_wrap").fadeOut(500);
-        $(".calendar_holder").delay(500);
-        $(".calendar_holder, .root3").fadeIn(500);
+  $('#reserv').click(function(){
+    $('.Make_an_Appointment, .Bread_crumbs').fadeOut(500);
+    $('.success').delay(500);
+    $('.success').fadeIn(500);
+    return false;
   });
 
   function OneLineImg(stringSelectorImgColection){
@@ -40,8 +41,8 @@ window.onload=function(){
     colection.css('height', MaxH);
   }
 
-  $('#cont').click(function(){
-    $("#slider_top, .sinlge_servise_viwer, #services, #sercices_holder, .chose_hospital, .m_specialist_wrap, .Make_an_Appointment, .Bread_crumbs").fadeOut(500);
+  $('.cont').click(function(){
+    $("#slider_top, .sinlge_servise_viwer, #services, #sercices_holder, .chose_hospital, .m_specialist_wrap, .Make_an_Appointment, .success, .Bread_crumbs").fadeOut(500);
     $('.contacts_page').delay(500);
     $('.contacts_page').fadeIn(500);
     return false;
@@ -64,6 +65,7 @@ window.onload=function(){
 
   owlSpec.owlCarousel({
     items: 3,
+    slideBy: 1,
   	autoplay: false,
   	autoplayTimeout: 3000,
   	autoplaySpeed: speed,
@@ -76,11 +78,28 @@ window.onload=function(){
   			items: 3
   		},
       1:{
-        items: 2
+        items: 2,
       }
   	},
-  	loop:true
+  	loop:true,
+    onInitialized:clickable,
+    onTranslated:dinamicClickable
   });
+
+    function clickable(){
+       $(".m_single_specialist, .i_dont_care button").click(function(){
+           $(".m_specialist_wrap").fadeOut(500);
+           $(".calendar_holder").delay(500);
+           $(".calendar_holder, .root3").fadeIn(500);
+      });
+   }
+   function dinamicClickable(){
+       $(".owl-item.active .m_single_specialist").click(function(){
+           $(".m_specialist_wrap").fadeOut(500);
+           $(".calendar_holder").delay(500);
+           $(".calendar_holder, .root3").fadeIn(500);
+      });
+   }
 
    function letsSlide(){
    		if(+spec_oldValue+3<spec_control[0].value){
@@ -152,9 +171,6 @@ window.onload=function(){
     else start.setDate(start.getDate()-6);
     $(".avaliableDate").unbind();
     $(date).removeClass('notAvaliableDate avaliableDate today anotherMonth');
-    /*if (currentMonth>today.getMonth()) {
-        $(date).addClass('avaliableDate');
-    } else{}*/
     for (var i = 0; i < date.length; i++) {
         switch(true){
             case start<today: $(date[i]).addClass('notAvaliableDate');
@@ -180,7 +196,7 @@ window.onload=function(){
    });
 
    $('div.chosen').mouseover(function(){
-        $('li.chosen').css({'background-color':'Lime'});
+        $('li.chosen').css({'background-color':'#26d926'});
    }); 
    $('div.chosen').mouseleave(function(){
         $('li.chosen').removeAttr('style');

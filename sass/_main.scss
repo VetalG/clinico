@@ -296,13 +296,7 @@ main{
 	}
 }
 .m_specialist_hold{
-	&:hover{
-		.owl-nav{
-			display: block;
-		}
-	}
 	.owl-nav{
-		display: none;
 		.owl-prev, .owl-next{
 			position: absolute;
 			top:40%;
@@ -862,9 +856,37 @@ div.not_available{
 	background-color: $bfon;
 	color:$white;
 	&:hover{
-		background-color: Lime;
+		background-color: desaturate(Lime,30%);
 	}
 }
+
+.success{
+	display: none;
+	max-width: 600px;
+	dl{
+		padding: 5px;
+		font-size: 1.3rem;
+		dt{
+			padding: 10px;
+			font-family: PT_Serif_Caption-Web-Bold;
+			font-weight: bold;
+			color:#1A0C0C;
+		}
+		dd{
+			margin-left:50px;
+			padding: 10px;
+		}
+	}
+	.thanks{
+		font-size: 1.5rem;
+		padding: 15px;
+		text-align: center;
+	}
+	button.light{
+		width: 100%;
+	}
+}
+
 
 footer{
 	/*h3{
